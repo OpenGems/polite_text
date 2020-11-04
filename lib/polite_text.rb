@@ -6,7 +6,6 @@ module PoliteText
   class Error < StandardError; end
 
   class << self
-    # Replace swear words in a text. Can provide optional arg to replace by something.
     def be_polite!(text)
       PoliteText::SwearWordsCleaner.new(text).clean
     end
