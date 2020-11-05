@@ -27,10 +27,6 @@ RSpec.describe PoliteText::TextCleaner do
       expect( PoliteText::TextCleaner.new(polite_string).clean! ).to eq(polite_string)
     end
 
-    it 'should return a string without the swear word' do
-      expect( impolite_text_cleaned ).not_to be_nil
-    end
-
     it 'should return a string without the first swear word' do
       expect( impolite_text_cleaned[first_swear_word] ).to be_nil
     end
