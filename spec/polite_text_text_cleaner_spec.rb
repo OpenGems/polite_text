@@ -23,12 +23,8 @@ RSpec.describe PoliteText::TextCleaner do
     let(:impolite_string) { "#{first_swear_word} #{second_swear_word} sentence #{first_swear_word}  #{second_swear_word}" }
     let(:impolite_text_cleaned) { PoliteText::TextCleaner.new(impolite_string).clean! }
 
-    it 'should return nil for polite_string' do
-      expect( PoliteText::TextCleaner.new(polite_string).clean! ).to be_nil
-    end
-
-    it 'should not return nil for impolite_string' do
-      expect( impolite_text_cleaned ).not_to be_nil
+    it 'should return same polite_string for polite_string' do
+      expect( PoliteText::TextCleaner.new(polite_string).clean! ).to eq(polite_string)
     end
 
     it 'should return a string without the swear word' do

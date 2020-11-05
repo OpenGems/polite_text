@@ -9,7 +9,7 @@ module PoliteText
     end
 
     def clean!
-      text.gsub!(swear_words, '***')
+      text.gsub!(swear_words, '***') || text
     end
   end
 end
