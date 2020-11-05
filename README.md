@@ -25,6 +25,9 @@ Or install it yourself as:
 
 ## Usage
 
+### Swear words  🔞
+PoliteText has a default list of forbidden words, this list includes the most common swear words used on the web. You can acces the list of swear words [here](https://github.com/OpenGems/polite_text/blob/master/lib/locales/en.yml).
+
 ### Remove swear words 🤬
 ```
 include PoliteText
@@ -45,6 +48,32 @@ str = "This gem is a fucking big shit but let's try it"
 PoliteText.is_polite?(str)
 
 => false
+```
+
+### Example for an Article model
+
+```
+# == Schema Information
+#
+# Table name: articles
+#
+#  id         :bigint           not null, primary key
+#  text      :string           default(""), not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+class Article < ApplicationRecord
+  include Politetext
+
+  # Callbacks
+  before_save :make_text_polite
+
+  # Methods
+  def make_text_polite
+    PoliteText.be_polite!(text)
+  end
+end
 ```
 
 ## Contributing
