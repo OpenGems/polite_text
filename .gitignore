@@ -9,3 +9,12 @@
 
 # rspec failure tracking
 .rspec_status
+
+# IDE
+/.idea
+.idea/workspace.xml
+.rakeTasks
+.generators
+
+# Gem
+*.gem
