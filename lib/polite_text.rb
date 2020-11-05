@@ -3,8 +3,6 @@ require 'polite_text/text_scanner'
 require 'polite_text/text_cleaner'
 
 module PoliteText
-  class Error < StandardError; end
-
   class << self
     def be_polite!(text)
       PoliteText::TextCleaner.new(text).clean!

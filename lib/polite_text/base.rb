@@ -16,7 +16,7 @@ module PoliteText
 
     private
 
-    # Todo: Implement dynamic locale with I18N
+    # TODO: Implement dynamic locale with I18N
     def locale
       @locale ||= 'en'
     end

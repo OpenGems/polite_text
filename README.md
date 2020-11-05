@@ -82,10 +82,11 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/OpenGe
 This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
 ### Todo 💪
-- [ ] Allow users to add their own swear words list
-- [ ] Allow users to remove swear words from the default list
-- [ ] Manage locales with I18N
-- [ ] Add swear words from multiple languages
+- [ ] Allow users to add their own swear words list.
+- [ ] Allow users to remove swear words from the default list.
+- [ ] Manage locales with I18N.
+- [ ] Add swear words from multiple languages.
+- [ ] Improve swear words list and keeping it short.
 
 ## License
 

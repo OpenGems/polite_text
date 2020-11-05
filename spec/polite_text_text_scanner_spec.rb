@@ -5,7 +5,7 @@ RSpec.describe PoliteText::TextScanner do
     let(:empty_text) { PoliteText::TextScanner.new('') }
     let(:nil_text) { PoliteText::TextScanner.new(nil) }
 
-    it 'should raise an ArgumentError error if text is empty' do
+    it 'should not raise an ArgumentError error if text is empty' do
       expect { empty_text.match_swear_word? }.not_to raise_error(ArgumentError)
     end
 
