@@ -64,7 +64,7 @@ PoliteText.is_polite?(str)
 #
 
 class Article < ApplicationRecord
-  include Politetext
+  include PoliteText
 
   # Callbacks
   before_save :make_text_polite
