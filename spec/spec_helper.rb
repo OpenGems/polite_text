@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'polite_text'
+require 'faker'
 require 'simplecov'
 
 SimpleCov.start

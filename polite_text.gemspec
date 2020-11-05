@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.10'
   spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.1'
   spec.add_development_dependency 'simplecov', '~> 0.19.1'
+  spec.add_development_dependency 'faker', '~> 2.14'
 end

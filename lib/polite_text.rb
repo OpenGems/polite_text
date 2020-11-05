@@ -7,7 +7,7 @@ module PoliteText
 
   class << self
     def be_polite!(text)
-      PoliteText::TextCleaner.new(text).clean
+      PoliteText::TextCleaner.new(text).clean!
     end
 
     def is_polite?(text)

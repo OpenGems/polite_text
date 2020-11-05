@@ -1,3 +1,5 @@
+require 'yaml'
+
 module PoliteText
   class Base
     def swear_words
