@@ -93,7 +93,7 @@ Place it where you want in your app, we recommend here : `./lib/polite_text/my_c
 
 ### Example for an Article model
 
-### Remove swear words 🤬
+### Remove or detect swear words 🤬  🙅‍♂️ 🙅‍♀️
 ```
 # Inside a random_model.rb
 
