@@ -3,19 +3,13 @@ module PoliteText
     attr_reader :text
 
     def initialize(text)
-      @text = text.to_s
+      raise ArgumentError.new('The text can not be nil') if text.nil?
 
-      validate_text!
+      @text = text.to_s
     end
 
     def clean!
       text.gsub!(swear_words, '***')
-    end
-
-    private
-
-    def validate_text!
-      raise ArgumentError.new('The text can not be empty') if @text.empty?
     end
   end
 end

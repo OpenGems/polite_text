@@ -4,7 +4,7 @@ RSpec.describe PoliteText::TextCleaner do
     let(:nil_text) { PoliteText::TextScanner.new(nil) }
 
     it 'should raise an ArgumentError error if text is empty' do
-      expect { empty_text.clean! }.to raise_error(ArgumentError)
+      expect { empty_text.clean! }.not_to raise_error(ArgumentError)
     end
 
     it 'should raise an ArgumentError error if text is nil' do
