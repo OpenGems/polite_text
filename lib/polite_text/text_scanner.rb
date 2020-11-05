@@ -1,5 +1,5 @@
 module PoliteText
-  class SwearWordsScanner < Base
+  class TextScanner < Base
     attr_reader :text
 
     def initialize(text)
