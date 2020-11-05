@@ -102,7 +102,7 @@ include PoliteText
 str = "This gem is a fucking big shit but let's try it"
 
 current_dir = __dir__
-custom_path = "#{current_dir}/../lib/polite_text/fr.yml"
+custom_path = "#{current_dir}/../../lib/polite_text/fr.yml"
 
 PoliteText.be_polite!(str, custom_path)
 => "This *** is a fucking *** shit *** let's try it" 
