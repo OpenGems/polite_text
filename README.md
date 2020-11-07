@@ -79,7 +79,7 @@ end
 ### Custom swear words list  🔞
 Create a custom list in a **YAML** file following this format :
 ```
-# my_custom_swear_words.yml
+# custom_swear_words.yml
 
 swear_words:
   - gem
@@ -89,25 +89,28 @@ swear_words:
 
 Place it where you want in your app, we recommend here : `./lib/polite_text/my_custom_swear_words.yml`
 
-👉 You just need to pass the path to this file as a second argument.
+## Confirguration
 
-### Example for an Article model
+📄 Create an initializer named `polite_text.rb`
 
-### Remove or detect swear words 🤬  🙅‍♂️ 🙅‍♀️
+✌️ Add the path to your custom swear words list like this :
+
 ```
-# Inside a random_model.rb
+# ./config/initializers/polite_text.rb
 
-include PoliteText
+PoliteText.configure do |config|
+  config.custom_swear_words_path = "#{__dir__}/../../lib/polite_text/custom_swear_words.yml"
+end
+```
 
+PoliteText is now configured with your custom list ✨💫
+```
 str = "This gem is a fucking big shit but let's try it"
 
-current_dir = __dir__
-custom_path = "#{current_dir}/../lib/polite_text/fr.yml"
-
-PoliteText.be_polite!(str, custom_path)
+PoliteText.be_polite!(str)
 => "This *** is a fucking *** shit *** let's try it" 
 
-PoliteText.is_polite?(str, custom_path)
+PoliteText.is_polite?(str)
 => false
 ```
 

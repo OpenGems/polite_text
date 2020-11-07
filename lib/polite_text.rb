@@ -4,12 +4,27 @@ require 'polite_text/text_cleaner'
 
 module PoliteText
   class << self
-    def be_polite!(text, custom_swear_words_path = nil)
-      PoliteText::TextCleaner.new(text, custom_swear_words_path).clean!
+    attr_accessor :custom_swear_words_path
+
+    def configure
+      yield self if block_given?
+      check_attrs
     end
 
-    def is_polite?(text, custom_swear_words_path = nil)
-      PoliteText::TextScanner.new(text, custom_swear_words_path).match_swear_word?
+    def be_polite!(text)
+      PoliteText::TextCleaner.new(text).clean!
+    end
+
+    def is_polite?(text)
+      PoliteText::TextScanner.new(text).match_swear_word?
+    end
+
+    private
+
+    def check_attrs
+      unless custom_swear_words_path.is_a?(::String)
+        raise(ArgumentError, 'Invalid path to your custom swear words list.')
+      end
     end
   end
 end

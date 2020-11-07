@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    polite_text (0.1.22)
+    polite_text (0.3.0)
 
 GEM
   remote: https://rubygems.org/
