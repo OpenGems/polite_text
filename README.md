@@ -107,7 +107,6 @@ PoliteText is now configured with your custom list ✨💫
 ```
 str = "This gem is a fucking big shit but let's try it"
 
-<<<<<<< HEAD
 PoliteText.be_polite!(str)
 => "This *** is a fucking *** shit *** let's try it" 
 
