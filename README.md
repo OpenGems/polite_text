@@ -30,8 +30,6 @@ PoliteText has a default list of forbidden words, this list includes the most co
 
 ### Remove swear words 🤬
 ```
-include PoliteText
-
 str = "This gem is a fucking big shit but let's try it"
 
 PoliteText.be_polite!(str)
@@ -40,8 +38,6 @@ PoliteText.be_polite!(str)
 
 ### Check if string is polite 🙅‍♂️ 🙅‍♀️
 ```
-include PoliteText
-
 str = "This gem is a fucking big shit but let's try it"
 
 PoliteText.is_polite?(str)
@@ -62,8 +58,6 @@ PoliteText.is_polite?(str)
 #
 
 class Article < ApplicationRecord
-  include PoliteText
-
   # Callbacks
   before_save :make_text_polite
 
